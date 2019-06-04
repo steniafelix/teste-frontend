@@ -14,14 +14,14 @@ menu.className = "menu";
 
 //Fazer loop para incluir itens do menu
 const itemMenu = ["Home", "About", "Team", "Portfolio", "Contact"];
-for (var i = 0; i < itemMenu.length; i++) {
-  const item = document.createElement("li");
+const listMenu = itemMenu.map(item => {
+  const li = document.createElement("li");
   const itemLink = document.createElement("a");
-  itemLink.textContent = itemMenu[i];
-  itemLink.href = "#" + itemMenu[i];
-  item.appendChild(itemLink);
-  menu.appendChild(item);
-}
+  itemLink.textContent = item;
+  itemLink.href = "#" + item;
+  li.appendChild(itemLink);
+  menu.appendChild(li);
+});
 
 //Banner
 const divBanner = document.createElement("div");
