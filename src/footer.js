@@ -7,6 +7,7 @@ const copyright = document.createElement("p");
 copyright.textContent = "Copyright © Your Company 2014. All Rights Reserved";
 
 const itemMenu = ["Home", "About", "Team", "Portfolio", "Contact"];
+//------Renderizando menu ------//
 const listMenu = itemMenu.map(item => {
   const li = document.createElement("li");
   const itemLink = document.createElement("a");

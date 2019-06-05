@@ -14,6 +14,8 @@ menu.className = "menu";
 
 //Fazer loop para incluir itens do menu
 const itemMenu = ["Home", "About", "Team", "Portfolio", "Contact"];
+
+//------Renderizando menu ------//
 const listMenu = itemMenu.map(item => {
   const li = document.createElement("li");
   const itemLink = document.createElement("a");

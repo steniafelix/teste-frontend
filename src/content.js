@@ -21,11 +21,9 @@ img.src = "/images/iPad-Air.png";
 img.className = "img";
 const linkAbount = document.createElement("a");
 linkAbount.href = "#";
-const imgContent = document.createElement("img");
-imgContent.src = "/images/Image-iPad-Deviceweb-elements.png";
-imgContent.className = "img-content";
+
 const linkImgDw = document.createElement("img");
-linkImgDw.src = "/images/download-icon.png";
+linkImgDw.src = "/images/download-icon-b.png";
 const descriptionAbout = document.createElement("p");
 descriptionAbout.textContent =
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.";
@@ -37,7 +35,6 @@ sectionAbount.appendChild(textAbout);
 sectionAbount.appendChild(img);
 sectionAbount.appendChild(linkAbount);
 linkAbount.appendChild(linkImgDw);
-sectionAbount.appendChild(imgContent);
 sectionAbount.appendChild(descriptionAbout);
 
 //
@@ -57,6 +54,7 @@ textOurTem.textContent =
 
 const Team = ["M", "F", "M", "F"];
 
+//------Renderizando lista de team ------//
 const team = Team.map(item => {
   const div = document.createElement("div");
   div.className = "team";
@@ -138,6 +136,7 @@ const list = [
   "Design"
 ];
 
+//------Renderizando works ------//
 const listar = list.map(item => {
   if (item !== "none") {
     const a = document.createElement("a");
