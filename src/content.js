@@ -1,13 +1,16 @@
 const div = document.getElementById("app");
 
-//Content
+//
+//----------------------Content----------------------//
 const content = document.createElement("content");
 content.className = "content";
 
-//Abount
-const divAbout = document.createElement("div");
-divAbout.className = "about";
-divAbout.id = "About";
+div.appendChild(content);
+
+//----------------------Abount----------------------//
+const sectionAbount = document.createElement("section");
+sectionAbount.className = "about";
+sectionAbount.id = "About";
 const titleAbout = document.createElement("h3");
 titleAbout.textContent = "About Us";
 const textAbout = document.createElement("p");
@@ -18,22 +21,36 @@ img.src = "/images/iPad-Air.png";
 img.className = "img";
 const linkAbount = document.createElement("a");
 linkAbount.href = "#";
-const linkImg = document.createElement("img");
-linkImg.src = "/images/Image-iPad-Deviceweb-elements.png";
+const imgContent = document.createElement("img");
+imgContent.src = "/images/Image-iPad-Deviceweb-elements.png";
+imgContent.className = "img-content";
+const linkImgDw = document.createElement("img");
+linkImgDw.src = "/images/download-icon.png";
 const descriptionAbout = document.createElement("p");
 descriptionAbout.textContent =
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.";
 
-//OurTem
-const divOurTeam = document.createElement("div");
-divOurTeam.className = "our-team";
-divOurTeam.id = "Team";
+//Abount
+content.appendChild(sectionAbount);
+sectionAbount.appendChild(titleAbout);
+sectionAbount.appendChild(textAbout);
+sectionAbount.appendChild(img);
+sectionAbount.appendChild(linkAbount);
+linkAbount.appendChild(linkImgDw);
+sectionAbount.appendChild(imgContent);
+sectionAbount.appendChild(descriptionAbout);
+
+//
+//----------------------OurTem----------------------//
+const sectionOurTem = document.createElement("section");
+sectionOurTem.className = "our-team";
+sectionOurTem.id = "Team";
 const titleOurTem = document.createElement("h3");
 titleOurTem.textContent = "Our Team";
 const textOurTem = document.createElement("p");
 
-divOurTeam.appendChild(titleOurTem);
-divOurTeam.appendChild(textOurTem);
+sectionOurTem.appendChild(titleOurTem);
+sectionOurTem.appendChild(textOurTem);
 
 textOurTem.textContent =
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.";
@@ -41,40 +58,73 @@ textOurTem.textContent =
 const Team = ["M", "F", "M", "F"];
 
 const team = Team.map(item => {
+  const div = document.createElement("div");
+  div.className = "team";
   const a = document.createElement("a");
-  a.className = "team";
+  a.href = "#";
+  const imgLink = document.createElement("img");
+  imgLink.src = "/images/button.png";
+  imgLink.className = "btn";
   const name = document.createElement("h6");
   name.textContent = "Name";
   const nameDescription = document.createElement("p");
   nameDescription.textContent =
     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. ";
-  const btnTeam = document.createElement("icon");
+
   if (item == "M") {
     const img = document.createElement("img");
     img.src = "/images/ClipM.png";
-    a.appendChild(img);
+    div.appendChild(img);
   } else {
     const img = document.createElement("img");
     img.src = "/images/ClipF.png";
-    a.appendChild(img);
+    div.appendChild(img);
   }
-  divOurTeam.appendChild(a).appendChild(name);
-  a.appendChild(nameDescription);
-  a.appendChild(btnTeam);
+  sectionOurTem.appendChild(div).appendChild(name);
+  div.appendChild(nameDescription);
+  div.appendChild(a).appendChild(imgLink);
 });
 
-//Portfolio
-const divProtfolio = document.createElement("div");
-divProtfolio.className = "portfolio";
-divProtfolio.id = "Portfolio";
+//Our Tem
+content.appendChild(sectionOurTem);
+
+//
+//----------------------Portfolio----------------------//
+const sectionPortilofio = document.createElement("section");
+sectionPortilofio.className = "portfolio";
+sectionPortilofio.id = "Portfolio";
 const titlePortfolio = document.createElement("h3");
 titlePortfolio.textContent = "Portfolio";
 const textPortfolio = document.createElement("p");
 textPortfolio.textContent =
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.";
 
-divProtfolio.appendChild(titlePortfolio);
-divProtfolio.appendChild(textPortfolio);
+const divTags = document.createElement("div");
+divTags.className = "tags";
+const All = document.createElement("button");
+All.textContent = "All";
+const Design = document.createElement("button");
+Design.textContent = "Design";
+const Identify = document.createElement("button");
+Identify.textContent = "Identify";
+const Photography = document.createElement("button");
+Photography.textContent = "Photography";
+const Ilustration = document.createElement("button");
+Ilustration.textContent = "Ilustration";
+
+content.appendChild(sectionPortilofio);
+sectionPortilofio.appendChild(titlePortfolio);
+sectionPortilofio.appendChild(textPortfolio);
+sectionPortilofio.appendChild(divTags);
+divTags.appendChild(All);
+divTags.appendChild(Design);
+divTags.appendChild(Identify);
+divTags.appendChild(Photography);
+divTags.appendChild(Ilustration);
+
+const divWorks = document.createElement("div");
+divWorks.className = "works";
+sectionPortilofio.appendChild(divWorks);
 
 const list = [
   "Design",
@@ -93,33 +143,45 @@ const listar = list.map(item => {
     const a = document.createElement("a");
     a.className = "itens";
     a.href = "#";
+    const article = document.createElement("article");
+    article.className = "article";
     const name = document.createElement("h4");
     name.textContent = item;
     const nameDescription = document.createElement("p");
     nameDescription.textContent =
       "Lorem ipsum dolor sit amet, consec tetuer adipiscing elit.";
-    divProtfolio.appendChild(a);
-    a.appendChild(name);
-    a.appendChild(nameDescription);
+    divWorks.appendChild(a);
+    a.appendChild(article);
+    article.appendChild(name);
+    article.appendChild(nameDescription);
   } else {
     const a = document.createElement("a");
     a.className = "itens";
     a.href = "#";
-    divProtfolio.appendChild(a);
+    a.id = "none";
+    const article = document.createElement("article");
+    article.className = "article";
+    const img = document.createElement("img");
+    img.src = "/images/Shape-9.png";
+    divWorks.appendChild(a);
+    a.appendChild(article);
+    article.appendChild(img);
   }
 });
 
-//Contact
-const divContact = document.createElement("div");
-divContact.className = "contact";
-divContact.id = "Contact";
+//
+//----------------------Contact----------------------//
+const sectionContact = document.createElement("section");
+sectionContact.className = "contact";
+sectionContact.id = "Contact";
 const titleContact = document.createElement("h3");
 titleContact.textContent = "Contact";
 const textContact = document.createElement("p");
 textContact.textContent =
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.";
 
-//Form
+//
+//-----------------Form-----------------//
 const form = document.createElement("form");
 //input Name
 const inputName = document.createElement("input");
@@ -152,31 +214,13 @@ btnForm.id = "sendForm";
 btnForm.textContent = "Submit";
 btnForm.href = "#";
 
-divContact.appendChild(titleContact);
-divContact.appendChild(textContact);
-divContact.appendChild(form);
+content.appendChild(sectionContact);
+sectionContact.appendChild(titleContact);
+sectionContact.appendChild(textContact);
+sectionContact.appendChild(form);
 form.appendChild(inputName);
 form.appendChild(inputAddress);
 form.appendChild(inputCity);
 form.appendChild(inputEmail);
 form.appendChild(inputMessage);
 form.appendChild(btnForm);
-
-//Content
-div.appendChild(content);
-
-//Abount
-content.appendChild(divAbout);
-divAbout.appendChild(titleAbout);
-divAbout.appendChild(textAbout);
-divAbout.appendChild(img);
-divAbout.appendChild(linkAbount).appendChild(linkImg);
-divAbout.appendChild(descriptionAbout);
-
-//Our Tem
-content.appendChild(divOurTeam);
-
-//Portfolio
-content.appendChild(divProtfolio);
-//Contact
-content.appendChild(divContact);

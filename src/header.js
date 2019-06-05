@@ -36,7 +36,7 @@ img.className = "img";
 const imgLink = document.createElement("a");
 imgLink.href = "#";
 const imgContent = document.createElement("img");
-imgContent.src = "/images/dw.png";
+imgContent.src = "/images/download-icon.png";
 imgContent.className = "img-content";
 
 div.appendChild(header);

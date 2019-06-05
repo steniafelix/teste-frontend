@@ -10,7 +10,7 @@ const itemMenu = ["Home", "About", "Team", "Portfolio", "Contact"];
 const listMenu = itemMenu.map(item => {
   const li = document.createElement("li");
   const itemLink = document.createElement("a");
-  itemLink.textContent = item + " " + " : ";
+  itemLink.textContent = item;
   itemLink.href = "#" + item;
   menu.appendChild(li);
   li.appendChild(itemLink);

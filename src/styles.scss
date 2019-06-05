@@ -7,12 +7,15 @@
 body {
   font-family: "Arial Narrow", sans-serif;
 }
-//Header
+
+//
+//----------------------Header----------------------//
 header {
   background: #2c3e50;
   color: #fff;
-  height: 600px;
+  height: 620px;
 
+  //Top Bar
   .divTopBar {
     border-bottom: 1px solid #222f3d;
     .logo {
@@ -21,6 +24,7 @@ header {
       padding: 1% 0 0% 20%;
       margin-bottom: -20px;
     }
+    //Menu
     .menu {
       position: relative;
       display: block;
@@ -30,6 +34,10 @@ header {
       a {
         color: #7e95ae;
         text-decoration: none;
+      }
+
+      a:hover {
+        color: #fff;
       }
 
       li {
@@ -45,6 +53,7 @@ header {
     h2 {
       font-size: 45px;
       font-family: "Franklin Gothic Medium", sans-serif;
+      margin: 10px 0 10px 0;
     }
     p {
       font-size: 25px;
@@ -52,24 +61,28 @@ header {
     .img {
       position: absolute;
       display: block;
-      transform: translate(45%, 10%);
+      transform: translate(307px, 39px);
     }
+
     a {
       position: absolute;
       display: block;
-      transform: translate(75%, 19%);
-    }
-    a:hover {
-      box-shadow: 2px 3px 7px #161f29;
+      transform: translate(75%, 19.9%);
+      background: #ffffff21;
+      padding: 6.2% 13.9% 6.2% 13.9%;
     }
   }
 }
 
-//Content
+//
+//----------------------Content----------------------//
 content {
   color: #6b6b6b;
   align-items: center;
   text-align: center;
+
+  //
+  //----------------------About----------------------//
   .about {
     h3 {
       font-size: 45px;
@@ -77,34 +90,66 @@ content {
       margin: 2%;
     }
     p {
-      display: block;
       margin: 2%;
+      padding: 0 10% 0 10%;
+      text-align: center;
+      line-height: 150%;
+    }
+
+    img {
+    }
+    .img-content {
+      position: absolute;
+      transform: translate(-134%, 150%);
+      margin-top: 1%;
+    }
+
+    a {
+      position: absolute;
+      transform: translate(-111.6%, 7.9%);
+      background: rgba(204, 204, 204, 0.473);
+      padding: 1% 10.1% 10.1% 9%;
     }
   }
+  //
+  //----------------------Team----------------------//
   .our-team {
     background: #eeeeee;
+    padding: 2px 0 0 0;
     h3 {
       font-size: 45px;
       font-family: "Franklin Gothic Medium", sans-serif;
-      margin: 2%;
     }
     p {
       font-size: 15px;
       display: block;
       margin: 2%;
+      padding: 0 18% 0 18%;
+      text-align: center;
+      line-height: 20px;
     }
     .team {
       display: inline-block;
-      width: 18%;
+      width: 225px;
+
       img {
         border: 7px solid #cccccc;
         border-radius: 130px;
+        width: 80%;
       }
       h6 {
         font-size: 25px;
       }
+      .btn {
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 18%;
+        width: 30%;
+      }
     }
   }
+  //
+  //----------------------Portfolio----------------------//
   .portfolio {
     h3 {
       font-size: 45px;
@@ -114,36 +159,102 @@ content {
     p {
       font-size: 15px;
       margin: 2%;
+      line-height: 22px;
+    }
+    .works {
+      margin: 20px 8px 0 8px;
     }
     .itens {
+      width: 300px;
       display: inline-block;
-      //border: 2px solid #161f29;
-      padding: 4%;
-      background: #cccccc;
-      margin: 1px;
+      text-decoration: none;
+      padding: 170px 0 0;
+      background: rgba(204, 204, 204, 0.473);
+      margin: 10px;
+    }
+    .article {
+      text-align: left;
+      h4 {
+        font-size: 25px;
+      }
+      width: 300px;
+      background: #6b6b6b;
+      color: #fff;
+      padding: 5px;
+    }
+    #none {
+      padding: 186px 0 7px;
+      background: #6b6b6b;
+      article {
+        text-align: center;
+      }
+      img {
+        width: 50px;
+      }
+    }
+    .tags {
+      button {
+        margin: 3px;
+        padding: 5px 13px;
+        border: 1px solid #6b6b6b;
+        border-radius: 2px;
+      }
+      button:hover,
+      button:active {
+        border: 1px solid #2c3e50;
+      }
     }
   }
+  //
+  //----------------------Contact----------------------//
   .contact {
     background: #eeeeee;
+    padding-bottom: 50px;
+    margin-top: 50px;
 
     h3 {
       font-size: 45px;
       font-family: "Franklin Gothic Medium", sans-serif;
-      margin: 2%;
+      padding: 30px 0 10px 0;
     }
+
     p {
-      font-size: 15px;
       margin: 2%;
+      padding: 0 10% 0 10%;
+      line-height: 150%;
+    }
+
+    form {
+      input {
+        border-radius: 2px;
+        width: 450px;
+        height: 25px;
+        margin: 5px 10px;
+        padding: 2px;
+      }
+
+      button {
+        background: #2c3e50;
+        color: #fff;
+        padding: 10px 25px 10px 25px;
+        border-radius: 3px;
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      #message {
+        height: 90px;
+      }
     }
   }
 }
-
+//
+//----------------------Footer----------------------//
 footer {
   height: 50px;
   align-items: center;
   text-align: center;
   p {
-    font-size: 14px;
+    font-size: 12px;
     color: #9e9e9e;
     margin-top: 6px;
   }
@@ -153,7 +264,7 @@ footer {
     margin-top: 20px;
 
     a {
-      color: #1b2129;
+      color: #6b6b6b;
       text-decoration: none;
     }
 
