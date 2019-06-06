@@ -19,11 +19,14 @@ textAbout.textContent =
 const img = document.createElement("img");
 img.src = "/images/iPad-Air.png";
 img.className = "img";
+img.alt = "";
 const linkAbount = document.createElement("a");
 linkAbount.href = "#";
+linkAbount.target = "_blank";
 
 const linkImgDw = document.createElement("img");
 linkImgDw.src = "/images/download-icon-b.png";
+linkImgDw.alt = "";
 const descriptionAbout = document.createElement("p");
 descriptionAbout.textContent =
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.";
@@ -60,9 +63,11 @@ const team = Team.map(item => {
   div.className = "team";
   const a = document.createElement("a");
   a.href = "#";
+  a.target = "_blank";
   const imgLink = document.createElement("img");
   imgLink.src = "/images/button.png";
   imgLink.className = "btn";
+  imgLink.alt = "";
   const name = document.createElement("h6");
   name.textContent = "Name";
   const nameDescription = document.createElement("p");
@@ -72,10 +77,12 @@ const team = Team.map(item => {
   if (item == "M") {
     const img = document.createElement("img");
     img.src = "/images/ClipM.png";
+    img.alt = "";
     div.appendChild(img);
   } else {
     const img = document.createElement("img");
     img.src = "/images/ClipF.png";
+    img.alt = "";
     div.appendChild(img);
   }
   sectionOurTem.appendChild(div).appendChild(name);
@@ -142,6 +149,7 @@ const listar = list.map(item => {
     const a = document.createElement("a");
     a.className = "itens";
     a.href = "#";
+    a.target = "_blank";
     const article = document.createElement("article");
     article.className = "article";
     const name = document.createElement("h4");
@@ -158,10 +166,12 @@ const listar = list.map(item => {
     a.className = "itens";
     a.href = "#";
     a.id = "none";
+
     const article = document.createElement("article");
     article.className = "article";
     const img = document.createElement("img");
     img.src = "/images/Shape-9.png";
+    img.alt = "";
     divWorks.appendChild(a);
     a.appendChild(article);
     article.appendChild(img);

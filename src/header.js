@@ -35,11 +35,14 @@ pBanner.textContent = "A Template by Your Company";
 const img = document.createElement("img");
 img.src = "/images/Macbook-Pro.png";
 img.className = "img";
+img.alt = "";
 const imgLink = document.createElement("a");
 imgLink.href = "#";
+imgLink.target = "_blank";
 const imgContent = document.createElement("img");
 imgContent.src = "/images/download-icon.png";
 imgContent.className = "img-content";
+imgContent.alt = "";
 
 div.appendChild(header);
 header.appendChild(divTopBar).appendChild(logo);
